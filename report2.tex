@@ -127,36 +127,55 @@
 	% ==============================
 	% Main Content
 	% ==============================
-	\section{سوال‌ها}
+	\section{فهم \textenglish{HTTP}}
 	
-	\section{مقدمه}
-	
-	این یک جمله فارسی است.
-	
-	\begin{english}
-		This sentence is in English.
-	\end{english}
-	
-	\subsection{زیرموضوع}
-	
-	و این جمله‌ای دیگر به فارسی است که در میانهٔ آن یک \textenglish{inline English phrase} نیز دارد.  
-	این یک نمونهٔ پاورقی\LTRfootnote{\textenglish{footnote}} و این هم نمونهٔ یک ارجاع دهی
-	\cite{kurose2017}.
-	\subsection{زیرموضوع بعد}
-	
+	\section{Telnet}
+	\subsection{}
+	همانطور که در تصویر 1\ref{tel:1} مشاهده می‌شود، آدرس IP مربوط به کلاینت 192.168.0.2 می‌باشد و همچنین آدرس IP مربوط به سرور نیز 192.168.0.1 می‌باشد.
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=0.4\textwidth]{sharif.png}
-		\caption{نمونه‌ای از یک شکل}
+		\includegraphics[width=0.4\textwidth]{report2-resources/telnet/telent1.png}
+		\caption{وضعیت بسته‌های ارسالی در یک ارتباط TELNET}
+		\label{tel:1}
+	\end{figure}
+	برای سوالات بعدی، باید بسته‌هایی با پروتکل TELNET را فیلتر کنیم. 
+	برای این کار باید در قسمت بالا یعنی "Apply a display filter"، tcp.stream eq 0 را اعمال کرده و تمامی اطلاعات فرستاده و گرفته‌شده مثل تصویر \ref{tel:2} قابل مشاهده است.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{report2-resources/telnet/telent2.png}
+		\caption{یک ارتباط TELNET و دنباله بسته‌ها در وایرشارک}
+		\label{tel:2}
+	\end{figure}
+	\subsection{}
+	همانطور که در تصویر \ref{tel:3} مشاهده می‌کنید، رمز عبور کلاینت بازیابی شده user است.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{report2-resources/telnet/telent3.png}
+		\caption{بازیابی دنباله بسته‌ها و ساخت ارتباط TELNET از فایل داده شده.}
+		\label{tel:3}
+	\end{figure}
+	\subsection{}
+	در تصویر \ref{tel:4} دستورات اجرا شده توسط کلاینت قابل مشاهده است. دستورات با \& شروع شده و با رنگ قرمز می‌باشند.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{report2-resources/telnet/telent4.png}
+		\caption{بازیابی دنباله بسته‌ها و ساخت ارتباط TELNET از فایل داده شده.}
+		\label{tel:4}
 	\end{figure}
 	
-	% ==============================
-	% References
-	% ==============================
-	\newpage
-	\begin{LTR}
-		\printbibliography[title={مراجع}]
-	\end{LTR}
+	\section{DNS}
+	\subsection{}
+	ما تصمیم گرفتیم که برای اجرای دستور dig، از سایت \url{www.cloudflare.com} استفاده کنیم. همانطور که در تصویر 5 قابل مشاهده است، query برای resolver محلی با آدرس 192.168.126.56 ارسال شده است.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.4\textwidth]{report2-resources/telnet/telent4.png}
+		\caption{درخواست و پاسخ سیستم با ریزالور محلی}
+		\label{dns:1}
+	\end{figure}
+	
+	
+	\subsection{}
+	
 
 	
 \end{document}
